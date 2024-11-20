@@ -1,8 +1,5 @@
 package com.example.blureserve.apis;
 
-import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,10 +11,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.blureserve.models.Booking;
 import com.example.blureserve.models.Book;
 import com.example.blureserve.services.ReservationService;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -27,7 +22,7 @@ import java.security.interfaces.RSAPublicKey;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://jumpstart-oops.s3-website-us-east-1.amazonaws.com")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ReservationController {
     @Autowired
     private ReservationService reservationService;

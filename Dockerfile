@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Step 3: Copy the JAR file from your target folder into the container
-COPY target/seat-reservation-service.jar app.jar
+COPY target/ app.jar
 
 # Step 4: Expose the application port (ensure this matches your Spring Boot app's port)
 EXPOSE 8080
